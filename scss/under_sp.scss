@@ -5,35 +5,41 @@
 		#mainContent {
 			padding-bottom: 50px;
 		}
-		
+
 		.key {
 			margin-top: 0;
 			height: 300px;
+			background-image: url(../images/und_key_bg_sp.jpg);
+
 			.key_text {
 				padding: 10px;
 			}
+
 			h2 {
-			
+
 				font-size: var(--ttl_size);
 			}
 		}
-		
+
 		h3 {
 			margin-bottom: 25px;
 			font-size: calc(var(--ttl_size) - 2px);
-			
+
 		}
+
 		h4 {
 			margin-bottom: 20px;
 			font-size: calc(var(--ttl_size) - 4px);
 		}
+
 		h5 {
-		    margin-bottom: 15px;
-		    font-size: calc(var(--ttl_size) - 6px);
+			margin-bottom: 15px;
+			font-size: calc(var(--ttl_size) - 6px);
 		}
+
 		h6 {
 			margin-bottom: 10px;
-		    font-size: calc(var(--ttl_size) - 8px);
+			font-size: calc(var(--ttl_size) - 8px);
 		}
 	}
 }
@@ -49,68 +55,93 @@
 				}
 			}
 		}
+
 		section {
 			padding-top: 1px;
+
 			h3 {
 				margin-top: 60px;
 			}
 		}
+
 		.secH4 {
 			padding-top: 40px;
 		}
+
 		.secH5 {
 			padding-top: 30px;
+		}
+
+		.toc_list {
+			padding: 30px 20px;
 		}
 
 		.toc_list li {
 			width: 100%;
 		}
+
 		.imgBox {
 			&.rowImg {
-				.image_l, .image_r {
+
+				.image_l,
+				.image_r {
 					float: none;
 					width: auto;
 					margin: 0 auto 20px;
 					text-align: center;
 					max-width: none;
+
 					&:nth-child(n) {
 						max-width: none;
 					}
 				}
-				.txt_l, .txt_r {
+
+				.txt_l,
+				.txt_r {
 					float: none;
 					width: auto;
 				}
+
 				&.large {
-					.image_l, .image_r {
+
+					.image_l,
+					.image_r {
 						max-width: none;
 					}
-					.txt_l, .txt_r {
+
+					.txt_l,
+					.txt_r {
 						width: auto;
 					}
 				}
 			}
+
 			&.colImg {
 				.item {
-					&:not(:last-of-type){
+					&:not(:last-of-type) {
 						margin-bottom: 30px;
 					}
 				}
+
 				figure {
 					margin-bottom: 15px;
 				}
+
 				.text {
 					font-size: 14px;
 				}
 			}
-			&.colImg2, &.colImg3 {
+
+			&.colImg2,
+			&.colImg3 {
 				.item {
 					width: 100%;
 				}
+
 				picture {
 					height: auto;
 					min-height: 200px;
-					
+
 				}
 
 				img {
@@ -123,12 +154,15 @@
 			h3 {
 				margin-bottom: 0;
 			}
+
 			.text_h3 {
 				margin: 25px 0 0;
 			}
+
 			.text_h4 {
 				margin: 20px 0 0;
 			}
+
 			.text_h5 {
 				margin: 15px 0 0;
 			}
@@ -140,45 +174,58 @@
 					border-top-width: 0;
 				}
 			}
-			th:first-child{
+
+			th:first-child {
 				width: 200px;
 			}
-		} 
+		}
+
 		table {
 			&.rollTable {
 				width: 768px;
 			}
+
 			&.tbl_style01 {
-				th {
-				}
-				td {
-				}
+				th {}
+
+				td {}
+
 				@include iOS() {
 					tr:last-child {
-						th,td {
+
+						th,
+						td {
 							border-bottom-width: 1.4px;
 						}
-						
-					}}
+
+					}
+				}
 			}
+
 			&.resTable {
 				display: block;
-				tbody, tr, th, td {
+
+				tbody,
+				tr,
+				th,
+				td {
 					display: block;
 				}
-				
+
 				td {
 					&:not(:last-child) {
 						border-bottom: 0;
 					}
 				}
+
 				&.tbl_style01 {
 					&.colHead {
 						tr {
 							th {
-								border: 1px solid var(--main-color);	
+								border: 1px solid var(--main-color);
 								border-bottom: none;
 							}
+
 							&:not(:first-child) {
 								th {
 									border-top: none;
@@ -187,12 +234,14 @@
 						}
 					}
 				}
+
 				&.tbl_style02 {
-					
+
 					&.colHead {
 						th {
 							border-bottom: none;
 						}
+
 						tr:not(:last-child) {
 							td {
 								border-bottom: none;
@@ -202,6 +251,7 @@
 				}
 			}
 		}
+
 		.tbl_note {
 			display: block;
 		}
@@ -210,33 +260,45 @@
 		ul.list01 {
 			li {
 				font-size: 14px;
+				line-height: 1.8;
+				&:before {
+					width: 6px;
+					height: 6px;
+					top: .6em;
+				}
 			}
+
 			&.mcol-2 {
 				li {
 					width: 100%;
 					padding-bottom: 9px;
 					padding-right: 0;
+
+					&:last-child {
+						padding-bottom: 0;
+					}
 				}
 			}
 		}
 
 
 		.doctor_box {
-            padding: 0vw;
+			padding: 0vw;
 
-            .doctor_name {
-                bottom: 5vw;
-                right: 3.5vw;
-                font-size: 4vw;
-                padding: 3vw 2vw;
-            }
-        }
+			.doctor_name {
+				bottom: 3.5vw;
+				right: 3.5vw;
+				font-size: 4vw;
+				padding: 3vw 2vw;
+			}
+		}
 	}
 }
+
 @media only screen and (max-width: 375px) {
 	.under {
 		.imgBox {
-		
+
 			&.colImg2,
 			&.colImg3 {
 				.item {
@@ -244,19 +306,123 @@
 				}
 			}
 		}
-	}	
+	}
 }
+
 // End Under General
 
-
+//under components
 @media only screen and (max-width: 768px) {
 	.under {
-		.blog_post_button{
+
+		//flow
+		.und_flow {
+			font-size: 9px;
+		}
+
+		.flow_box {
+			margin-bottom: 45px;
+
+			&:before {
+				bottom: -1.4em;
+				left: 50%;
+				transform: translateX(-50%);
+				border-left: 4em solid transparent;
+				border-right: 4em solid transparent;
+				border-top: 2.5em solid var(--mode-color);
+			}
+
+			.box_body {
+				&:after {
+					font-size: 10em;
+					bottom: 0;
+				}
+				p {
+					font-size: 14px;
+				}
+			}
+		}
+
+		//feature
+		.und_feature {
+			font-size: 9px;
+		}
+
+		.feature_box {
+			padding: 40px;
+			padding-left: 12em;
+			margin-bottom: 45px;
+
+			.point {
+				font-size: 1.2em;
+			}
+
+			.box_ct {
+				p {
+					font-size: 14px;
+				}
+
+				.head {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		.ud_map {
+			height: 299px;
+		}
+
+		.exp {
+			li {
+				line-height: 1.8;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	.under {
+		.und_flow {}
+
+		.flow_box {
+			padding: 6em 25px 7em 7em;
+		}
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.under {
+		.feature_box {
+			padding: 30px;
+
+			.point {
+				font-size: 1em;
+			}
+
+			.box_ct {
+				.head {
+					padding-left: 7em;
+				}
+			}
+
+		}
+	}
+}
+
+//end under components
+@media only screen and (max-width: 768px) {
+	.under {
+		.blog_post_button {
 			margin-top: 50px;
 		}
+
 		.clinic_tbl01 {
-			th {width: auto; text-align: left;}
+			th {
+				width: auto;
+				text-align: left;
+			}
 		}
+
 		.teeth_box {
 			.secH4 {
 				width: 100%;
@@ -267,18 +433,22 @@
 
 @include screen('max425') {
 	.under {
-		.access_box_img01, .access_box_img02 {
+
+		.access_box_img01,
+		.access_box_img02 {
 			.block {
 				&:nth-child(even) {
 					.big {
 						order: 0;
 					}
 				}
-				.big, .small {
+
+				.big,
+				.small {
 					width: 100%;
 				}
 			}
-		}		
+		}
 	}
 }
 
