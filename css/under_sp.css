@@ -181,13 +181,13 @@
     display: block;
   }
   .under ul.list01 li {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.8;
   }
   .under ul.list01 li:before {
-    width: 6px;
-    height: 6px;
-    top: 0.6em;
+    width: 9px;
+    height: 9px;
+    top: 0.5em;
   }
   .under ul.list01.mcol-2 li {
     width: 100%;

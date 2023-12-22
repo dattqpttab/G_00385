@@ -16,7 +16,6 @@
 			}
 
 			h2 {
-
 				font-size: var(--ttl_size);
 			}
 		}
@@ -259,12 +258,12 @@
 
 		ul.list01 {
 			li {
-				font-size: 14px;
+				font-size: 16px;
 				line-height: 1.8;
 				&:before {
-					width: 6px;
-					height: 6px;
-					top: .6em;
+					width: 9px;
+					height: 9px;
+					top: .5em;
 				}
 			}
 

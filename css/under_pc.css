@@ -53,6 +53,9 @@
 .under #mainContent {
   padding-bottom: 100px;
 }
+.under #mainContent > .inner {
+  max-width: 1190px;
+}
 .under .key {
   background: url(../images/und_key_bg.jpg) no-repeat center/cover;
   height: 400px;
@@ -76,6 +79,7 @@
 }
 .under .key h2 {
   display: table;
+  padding: 2px 0.547619em 0.142857em 0.8095em;
   font-size: 42px;
   text-align: center;
   letter-spacing: 0.15em;
@@ -101,43 +105,48 @@
   margin-bottom: 0;
 }
 .under h3 {
-  margin-bottom: 40px;
-  padding-top: 0.5em;
-  background: url(../images/und_h3_ico.png) no-repeat top center/0.825em auto;
-  font-size: 40px;
+  margin-bottom: 22px;
+  padding-top: 1.22222em;
+  background: url(../images/und_h3_ico.png) no-repeat top center/1.4444em auto;
+  font-size: 36px;
   text-align: center;
-  color: var(--main-color);
+  color: var(--clr2);
 }
 .under h4 {
   margin-bottom: 30px;
-  font-weight: 500;
-  font-size: 30px;
-  color: var(--clr2);
-}
-.under h5 {
-  margin-bottom: 25px;
-  padding-left: 0.7em;
+  padding: 10px 10px 10px 25px;
+  letter-spacing: 0.1em;
   font-weight: 500;
   font-size: 26px;
-  line-height: 1.2;
-  color: var(--second-color);
+  color: white;
+  background-color: var(--main-color);
 }
-.under h5:before {
-  content: "";
-  display: block;
-  position: absolute;
-  transition: all 0.3s;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 3px;
-  background-color: var(--second-color);
+.under h5 {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #fda30e;
+  background: url(../images/und_h5_ico.png) repeat-x left bottom/auto 2px;
 }
 .under h6 {
   margin-top: 30px;
   margin-bottom: 25px;
-  font-size: 18px;
-  color: var(--clr2);
+  font-size: 20px;
+  color: #74983a;
+}
+
+@media only screen and (min-width: 1441px) {
+  .under h3 {
+    padding-left: 10px;
+  }
+}
+.under.page-endoscopy #h4_4 {
+  padding-top: 0;
+}
+.under.page-stomach-cancer #h4_4 {
+  padding-top: 0;
 }
 
 .under .auto_br {
@@ -376,6 +385,7 @@
 }
 .under .feature_box h4 {
   color: var(--clr2);
+  background-color: transparent;
 }
 .under .feature_box:nth-child(2n) {
   --mode-color: #95bb58;
@@ -616,6 +626,7 @@
   font-size: 1.125em;
   font-weight: normal;
   text-align: center;
+  min-width: 100px;
 }
 .under table.tbl_style01 td {
   background-color: #fff;
@@ -703,22 +714,25 @@
 .under ul.list01 li {
   background-size: 10px auto;
   position: relative;
-  padding-left: 20px;
-  padding-bottom: 10px;
+  padding-left: 1.27778em;
+  padding-bottom: 12px;
   line-height: 2;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.2em;
 }
 .under ul.list01 li:last-child {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 .under ul.list01 li::before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: var(--main-color);
+  background: var(--second-color);
   position: absolute;
   left: 0;
-  top: 0.7em;
+  top: 0.55em;
 }
 .under .list_note {
   margin-top: 15px;
@@ -730,7 +744,7 @@
 .under .topic_path {
   font-size: 14px;
   line-height: 1.45;
-  padding: 8px 0;
+  padding: 10px 0;
 }
 .under .topic_path ul {
   display: block;
@@ -745,6 +759,7 @@
   float: left;
   text-transform: uppercase;
   color: var(--clr2);
+  letter-spacing: 0.1em;
 }
 .under .topic_path a {
   text-decoration: none;
@@ -788,7 +803,7 @@
   background: var(--clr2);
   position: absolute;
   left: 0;
-  top: 0.55em;
+  top: 0.5em;
 }
 .under .toc_list.style1 li {
   padding-right: 0;
@@ -909,12 +924,12 @@
   margin-bottom: 1em;
   padding-bottom: 0.5em;
   display: flex;
-  border-bottom: 1px dashed var(--second-color);
+  border-bottom: 1px dashed var(--main-color);
   line-height: 2;
 }
 .under .exp li .year {
   width: 8em;
-  color: var(--second-color);
+  color: var(--main-color);
   font-weight: 500;
 }
 .under .exp li .txt {
@@ -929,7 +944,10 @@
   text-align: center;
 }
 .under .clinic_tbl02 th:first-child {
-  width: 30%;
+  width: 20%;
+}
+.under .clinic_tbl02 th:nth-child(2) {
+  width: 15%;
 }
 .under .clinic_tbl02 th:not(:first-child) {
   width: 10%;
@@ -1158,6 +1176,15 @@
 .blog_list_style01 .item .info .date .tag a.news {
   background-color: var(--clr1);
 }
+.blog_list_style01 .item .info .date .tag a:nth-child(3n-2) {
+  background-color: var(--main-color);
+}
+.blog_list_style01 .item .info .date .tag a:nth-child(3n-1) {
+  background-color: var(--second-color);
+}
+.blog_list_style01 .item .info .date .tag a:nth-child(3n) {
+  background-color: var(--clr2);
+}
 .blog_list_style01 .item .info .date .day {
   margin-right: 20px;
 }
@@ -1179,7 +1206,7 @@
 }
 .blog_list_style01 .item .info .button {
   background-color: #fff;
-  border: 3px solid #ddd;
+  border: 3px solid var(--second-color);
   position: absolute;
   bottom: 0px;
   right: 0;
@@ -1206,7 +1233,7 @@
 }
 .blog_list_style01 .item .info .button::after {
   content: "";
-  background-color: var(--main-color);
+  background-color: var(--second-color);
   position: absolute;
   z-index: 0;
   top: 0;
