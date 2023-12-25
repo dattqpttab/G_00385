@@ -13,7 +13,6 @@
 --f-rounded:'M PLUS Rounded 1c', sans-serif;
 --f-notosans : 'Noto Sans JP', sans-serif;
 --f-jp : 'Noto Serif JP', serif;
---f-en : 'Noto Serif JP', serif;
 //--f-zennew : 'Zen Kaku Gothic New', sans-serif;
 //--f-open : 'Open Sans', sans-serif;
 
@@ -682,12 +681,12 @@ figure ,picture{
 .btn a {
     &::after {
         @include before;
-        width: 0.777778em;
-        height: 12px;
-        right: 20px;
-        top: calc(50% - 6px);
+        width: 5px;
+        height: 8px;
+        right: 15px;
+        top: calc(50% - 4px);
 
-        --mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12' %3E%3Cpath d='M12.444,5.999 L12.444,6.4 L13.999,5.999 L7.777,11.999 L6.222,11.0 L10.700,6.999 L0.0,6.999 L0.0,5.0 L10.578,5.0 L6.222,1.1 L7.777,0.0 L13.999,5.999 L12.444,5.999 Z'/%3E%3C/svg%3E");
+        --mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 70' %3E%3Cpath d='M41.544,40.630 C40.526,41.629 39.271,42.251 37.956,42.500 L12.113,67.937 C9.405,70.602 5.013,70.602 2.305,67.937 C-0.405,65.266 -0.405,60.952 2.305,58.287 L25.987,34.971 L2.305,11.654 C-0.405,8.983 -0.405,4.656 2.305,1.985 C5.013,-0.674 9.405,-0.674 12.113,1.985 L37.961,27.433 C39.274,27.683 40.528,28.309 41.544,29.311 C43.114,30.856 43.768,32.954 43.518,34.966 C43.768,36.984 43.114,39.089 41.544,40.630 Z'/%3E%3C/svg%3E");
         mask-image: var(--mask);
         -webkit-mask-image: var(--mask);
         mask-repeat: no-repeat;
@@ -711,24 +710,24 @@ figure ,picture{
         &.style01 {
             width: 100%;
             min-width: 180px;
-            max-width: 408px;
+            max-width: 360px;
             overflow: hidden;
 
             a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                min-height: 3.88889em;
-                padding: 1em;
+                min-height: 3.66667em;
+                padding: .5em 1.4em;
                 position: relative;
                 font-size: 1.8em;
-                font-weight: 500;
-                letter-spacing: 0.1em;
+                font-weight: 600;
+                letter-spacing: 0.15em;
                 line-height: 1.5;
                 color: #fff;
                 text-decoration: none;
                 text-align: center;
-                background-color: var(--main-color);
+                background-color: var(--second-color);
                 transition: all .3s;
                 border-radius: 40px;
 
@@ -743,10 +742,10 @@ figure ,picture{
                 @include screen('min769') {
                     &:hover {
 
-                        background-color: var(--clr1);
+                    background-color: var(--clr2);
 
                         &::after {
-                            right: 5px;
+                            transform: translateX(5px);
                         }
                     }
                 }
@@ -755,10 +754,16 @@ figure ,picture{
             }
 
             &.md {
+                max-width: 187px;
+                min-width: 160px;
                 a {
-                    font-size: 16px;
+                    min-height: 2.625em;
+                    font-size: 1.6em;
+                    padding: .5em;
 
-
+                    &:after {
+                        right: 10px;
+                    }
                 }
             }
         }
@@ -766,8 +771,7 @@ figure ,picture{
 
         &.bg01 {
             a {
-                background-color: transparent;
-                color: var(--main-color);
+                background-color: var(--main-color);
 
                 &::after {}
             }
@@ -775,7 +779,9 @@ figure ,picture{
 
         &.bg02 {
             a {
-                background-color: #f4bf0c;
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
             }
         }
     }

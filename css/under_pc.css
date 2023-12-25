@@ -216,7 +216,7 @@
 }
 @media only screen and (min-width: 769px) {
   .under .und_link:hover {
-    background-color: var(--main-color);
+    background-color: #74983a;
   }
   .under .und_link:hover .txt:after {
     right: 5px;
