@@ -260,7 +260,7 @@
 
 		@include screen('min769') {
 			&:hover {
-				background-color: var(--main-color);
+				background-color: #74983a;
 
 				.txt {
 					&:after {

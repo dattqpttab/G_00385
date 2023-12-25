@@ -143,10 +143,10 @@ body:not(.ovh) .menu_toggle .inside {
   top: 3px;
 }
 #nav-icon span:nth-child(2), #nav-icon span:nth-child(3) {
-  top: 11px;
+  top: 12px;
 }
 #nav-icon span:nth-child(4) {
-  top: 19px;
+  top: 21px;
 }
 #nav-icon.open span:nth-child(1) {
   top: 11px;
@@ -166,25 +166,26 @@ body:not(.ovh) .menu_toggle .inside {
 }
 
 .hamburger-btn {
-  background-color: var(--main-color);
-  width: var(--wrapper);
-  height: var(--wrapper);
+  background-color: #705f4a;
+  width: calc(var(--wrapper) - 20px);
+  height: calc(var(--wrapper) - 20px);
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 5px;
   z-index: 10;
   cursor: pointer;
   transition: all 0.3s;
 }
 @media only screen and (min-width: 769px) {
   .hamburger-btn:hover {
-    background-color: var(--clr1);
+    background-color: var(--main-color);
   }
 }
 .hamburger-btn .button-toggle {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding-top: calc(var(--wrapper) / 2 - 12px);
   height: 100%;
   margin: 0 auto;
   text-align: center;
@@ -342,6 +343,7 @@ Header & Footer
   }
   .header_top .logo img {
     max-height: 40px;
+    width: auto;
   }
   footer {
     padding: 60px 0 50px;
