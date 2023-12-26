@@ -13,8 +13,8 @@
 		height: 60px;
 		padding: 0;
 
-		
-		
+
+
 
 		p {
 			margin-bottom: 0;
@@ -33,31 +33,52 @@
 			}
 		}
 
-	
+
 	}
 
 	footer {
-	
+
 		padding: 60px 0 50px;
+		background-image: url(../images/ft_bg_sp.jpg);
+		.ft_logo {
+			max-width: 360px;
+		margin: 0 auto;
+		}
 
 		.ft_info {
 			width: auto;
 			margin: 0 auto;
 
-			.des {
-				
+
+			.des {}
+
+			.box_infor {
+				margin-top: 0;
+				padding-left: 0;
+				text-align: center;
 			}
+
+			 .ft_tel {
+				a {
+					font-size: 24px;
+				}
+			 }
 		}
-		.ft_map{
-			iframe{
+
+		.ft_map {
+			margin-left: auto;
+			margin-right: auto;
+			height: 260px;
+			iframe {
 				height: 100%;
 			}
 		}
+
 		.ft_link {
 			width: auto;
 		}
 
-	
+
 	}
 
 
@@ -130,19 +151,22 @@
 			p {}
 		}
 	}
+
 	.copyright {
 		display: block;
 		padding-top: 30px;
 		padding-bottom: 80px;
+
 		.flex {
 			justify-content: center;
 		}
 	}
 }
+
 @media only screen and (max-width: 640px) {
-	
+
 	.copyright {
-		
+
 
 		.flex {
 			max-width: 400px;
@@ -172,8 +196,19 @@
 			margin-right: auto;
 			padding: 0px 10px;
 			text-align: center;
-			span{
+
+			span {
 				display: inline-block;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.copyright {
+		.textwidget {
+			p {
+				font-size: 12px;
 			}
 		}
 	}

@@ -112,6 +112,7 @@
 }
 .home_page h3.white {
   color: #fff;
+  background-image: url(../images/h3_ico_white.png);
 }
 .home_page h3.white .en {
   color: #fff;
@@ -193,14 +194,6 @@ section {
 .timetable table tr:last-child td {
   padding-bottom: 1.1333333em;
 }
-.timetable .note {
-  margin-left: 13px;
-}
-@media only screen and (min-width: 769px) {
-  .timetable .note {
-    font-size: 15px;
-  }
-}
 
 @media only screen and (max-width: 1366px) and (min-width: 769px) {
   .timetable table {
@@ -279,6 +272,9 @@ section {
   background-size: 8.1em auto;
   background-position: center;
 }
+.index01 .tbl_note {
+  display: none;
+}
 .index01 .idx01_box_infor {
   display: flex;
   justify-content: space-between;
@@ -310,7 +306,7 @@ section {
 }
 .index01 .idx01_box_infor .infor_contact dl dd {
   letter-spacing: 0.1em;
-  width: calc(100% - 6.3em - 20px);
+  flex: 1;
 }
 .index01 .idx01_box_infor .infor_contact .tel {
   color: var(--main-color);
@@ -336,19 +332,25 @@ section {
 .index01 .idx01_box_infor .timetable table {
   margin-bottom: 18px;
 }
+.index01 .idx01_box_infor .note {
+  margin-left: 13px;
+}
+@media only screen and (min-width: 769px) {
+  .index01 .idx01_box_infor .note {
+    font-size: 15px;
+  }
+}
 .index01 .idx01_box_infor .btn-group {
   display: flex;
   justify-content: center;
   margin-top: 29px;
   flex-wrap: wrap;
 }
-.index01 .idx01_box_infor .btn-group .btn01 {
-  margin-right: 15px;
-}
 @media only screen and (min-width: 769px) {
   .index01 .idx01_box_infor .btn-group .btn01 {
     max-width: 250px;
     width: 45%;
+    margin-right: 15px;
   }
   .index01 .idx01_box_infor .btn-group .btn02 {
     max-width: 295px;
@@ -417,6 +419,193 @@ section {
   margin: 0 auto;
 }
 
+.index07 {
+  background: url(../images/idx07_bg.jpg) no-repeat center/cover;
+  padding: 23px 45px 80px;
+}
+.index07 h3 {
+  margin-bottom: 32px;
+}
+.index07 .box-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.index07 .box {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 40px;
+  padding-right: 5.8vw;
+  min-height: 500px;
+  --mode-color: #f8ae33;
+  background: url(../images/idx07_box_bg01.jpg) no-repeat center/cover;
+}
+.index07 .box .content {
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 526px;
+}
+.index07 .box .ttl {
+  position: relative;
+  margin-bottom: 24px;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  line-height: 1.636363;
+  font-family: var(--f-jp);
+  color: var(--clr2);
+}
+.index07 .box .ttl::after {
+  content: "";
+  display: block;
+  margin-top: 0.72727em;
+  width: 4.54545em;
+  height: 2px;
+  background-color: var(--mode-color);
+}
+.index07 .box .box_body {
+  margin-bottom: 22px;
+}
+.index07 .box .btn.style01 a {
+  background-color: var(--mode-color);
+}
+.index07 .box:nth-child(2n) {
+  --mode-color: #95bb58;
+  justify-content: flex-start;
+  padding-right: 40px;
+  padding-left: 4.8vw;
+  background-image: url(../images/idx07_box_bg02.jpg);
+}
+
+.index_banner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 43px 10px 55px;
+}
+.index_banner .bnr {
+  position: relative;
+  margin: 5px 12px;
+  width: 310px;
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .index_banner .bnr.bnr01 {
+    padding-right: 5px;
+  }
+}
+
+@keyframes idx08_bg {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -1920px center;
+  }
+}
+.index08 h3 {
+  margin-bottom: 22px;
+}
+.index08 .idx08_contact {
+  background: url(../images/idx_contact_bg.jpg) repeat-x;
+  padding: 151px 10px 150px;
+  max-height: 500px;
+  background-position: center;
+  background-size: auto 100%;
+  animation: idx08_bg 50s linear infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.index08 .idx08_contact .address {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  font-family: var(--f-jp);
+}
+.index08 .idx08_link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.index08 .idx08_link .col_l,
+.index08 .idx08_link .col_r {
+  width: 50%;
+  position: relative;
+}
+.index08 .idx08_link .col_l:after,
+.index08 .idx08_link .col_r:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.index08 .idx08_link .col_l:after {
+  background-color: var(--main-color);
+}
+.index08 .idx08_link .col_l .thumb {
+  margin-left: auto;
+  max-width: 637px;
+}
+.index08 .idx08_link .col_r:after {
+  background-color: var(--second-color);
+}
+.index08 .idx08_link .col_r .thumb {
+  margin-right: auto;
+  max-width: 660px;
+}
+.index08 .idx08_link .thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+}
+.index08 .idx08_link .box {
+  display: table;
+  margin: auto;
+  background-repeat: no-repeat;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  padding-top: 0.38889em;
+  color: white;
+}
+.index08 .idx08_link .box .note {
+  margin-bottom: 2px;
+  line-height: 1;
+  text-align: center;
+}
+.index08 .idx08_link .box .ttl {
+  font-size: 2em;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0.722222em auto;
+}
+.index08 .idx08_link .box .ttl.tel {
+  padding-left: 0.88889em;
+  background-image: url(../images/idx_contact_tel_ico.png);
+}
+.index08 .idx08_link .box .ttl.web {
+  padding-left: 1.26667em;
+  font-size: 1.66667em;
+  background-image: url(../images/idx_contact_web_ico.png);
+  background-position: left top 2px;
+  background-size: 0.866667em auto;
+}
+
 .idx_map {
   height: 450px;
 }
@@ -435,6 +624,16 @@ section {
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
   :root {
     --ttl_size: 24px;
+  }
+  .index07 .box {
+    padding: 40px;
+    padding-right: 20px;
+  }
+  .index07 .box:nth-child(2n) {
+    padding-left: 20px;
+  }
+  .index07 .box .btn-group {
+    font-size: 9px;
   }
 }
 @media only screen and (max-width: 1024px) and (min-width: 769px) {

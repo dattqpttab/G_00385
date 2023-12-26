@@ -70,10 +70,15 @@ body:not(.ovh) {
         visibility: visible;
     }
 
+
     ul {
         li {
             position: relative;
             overflow: hidden;
+            color: var(--clr2);
+            &:before {
+                background-color: var(--clr2);
+            }
         }
     }
 
