@@ -78,20 +78,176 @@
 
 // End Index General
 @media only screen and (max-width: 768px) {
-    .idx01 {
+    .index01 {
+        padding: 60px 20px;
         background-image: url(../images/idx01_bg_sp.jpg);
+
+        .timetable {
+            margin-bottom: 0;
+
+            table {
+                font-size: 9px;
+            }
+        }
+
+        .label {
+            font-size: 7px;
+        }
+
+        .inner_big {
+            padding: 60px 7vw 40px;
+        }
+
+        .idx01_box_infor {
+            #calendar {
+                height: 300px;
+            }
+
+            .box_left,
+            .box_right {
+                width: 100%;
+                max-width: 650px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .box_right {
+                margin-top: 30px;
+            }
+
+            .btn-group {
+                margin-top: 20px;
+            }
+
+            .infor_contact{
+                margin-bottom: 30px;
+            }
+        }
+
+        .news-group {
+            .box_news {
+                padding: 30px 20px;
+            }
+        }
+
+        .box_news {
+            width: 100%;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+
+    }
+
+    .index_banner {
+        padding: 40px 10px;
+
+        .bnr {
+            width: 250px;
+        }
+    }
+
+    .index07 {
+        padding: 40px 20px;
+
+        .box {
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 400px;
+            padding: 40px !important;
+
+            .ttl {
+                font-size: 20px;
+            }
+
+        }
+    }
+
+    .index08 {
+        .idx08_contact {
+            padding: 60px 10px;
+
+            .address {
+                font-size: 16px;
+            }
+        }
+
+        .idx08_link {
+            .thumb {
+                height: 80px;
+            }
+
+            .box {
+                font-size: 15px;
+            }
+        }
     }
 }
 
-@media only screen and (max-width: 375px) {}
-
-@media only screen and (max-width: 768px) {
-  
-
-
-
-
+@media only screen and (max-width: 639px) {
+    .index01 {
+        .timetable {
+            table {
+                font-size: 1.4vw;
+            }
+        }
+    }
 }
+
+@media only screen and (max-width: 520px) {
+    .index01 {
+        .timetable {
+            overflow: auto;
+
+            table {
+                font-size: 8px;
+                width: 550px;
+            }
+        }
+
+        .tbl_note {
+            display: block;
+        }
+    }
+
+    .index08 {
+        .idx08_link {
+
+            .col_l,
+            .col_r {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .index07 {
+        .box {
+            padding: 40px 5vw !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .index01 {
+        .inner_big {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .index01 .idx01_box_infor .infor_contact .tel {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {}
 
 
 
@@ -109,8 +265,8 @@
         ul {
             li {
                 .img {
-                    width: 225px;
-                    height: 500px;
+                    width: 220px;
+                    height: 220px;
                     background-size: 100% auto;
                 }
             }

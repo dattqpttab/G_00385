@@ -66,6 +66,10 @@ body:not(.ovh) .menu_toggle .inside {
 .menu_toggle ul li {
   position: relative;
   overflow: hidden;
+  color: var(--clr2);
+}
+.menu_toggle ul li:before {
+  background-color: var(--clr2);
 }
 .menu_toggle p {
   margin-bottom: 0;
@@ -347,10 +351,28 @@ Header & Footer
   }
   footer {
     padding: 60px 0 50px;
+    background-image: url(../images/ft_bg_sp.jpg);
+  }
+  footer .ft_logo {
+    max-width: 360px;
+    margin: 0 auto;
   }
   footer .ft_info {
     width: auto;
     margin: 0 auto;
+  }
+  footer .ft_info .box_infor {
+    margin-top: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+  footer .ft_info .ft_tel a {
+    font-size: 24px;
+  }
+  footer .ft_map {
+    margin-left: auto;
+    margin-right: auto;
+    height: 260px;
   }
   footer .ft_map iframe {
     height: 100%;
@@ -442,6 +464,11 @@ Header & Footer
   }
   .copyright .textwidget span {
     display: inline-block;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .copyright .textwidget p {
+    font-size: 12px;
   }
 }
 /* End Header & Footer

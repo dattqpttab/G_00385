@@ -41,14 +41,123 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  .idx01 {
+  .index01 {
+    padding: 60px 20px;
     background-image: url(../images/idx01_bg_sp.jpg);
+  }
+  .index01 .timetable {
+    margin-bottom: 0;
+  }
+  .index01 .timetable table {
+    font-size: 9px;
+  }
+  .index01 .label {
+    font-size: 7px;
+  }
+  .index01 .inner_big {
+    padding: 60px 7vw 40px;
+  }
+  .index01 .idx01_box_infor #calendar {
+    height: 300px;
+  }
+  .index01 .idx01_box_infor .box_left,
+  .index01 .idx01_box_infor .box_right {
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index01 .idx01_box_infor .box_right {
+    margin-top: 30px;
+  }
+  .index01 .idx01_box_infor .btn-group {
+    margin-top: 20px;
+  }
+  .index01 .idx01_box_infor .infor_contact {
+    margin-bottom: 30px;
+  }
+  .index01 .news-group .box_news {
+    padding: 30px 20px;
+  }
+  .index01 .box_news {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .index01 .box_news:last-child {
+    margin-bottom: 0;
+  }
+  .index_banner {
+    padding: 40px 10px;
+  }
+  .index_banner .bnr {
+    width: 250px;
+  }
+  .index07 {
+    padding: 40px 20px;
+  }
+  .index07 .box {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 400px;
+    padding: 40px !important;
+  }
+  .index07 .box .ttl {
+    font-size: 20px;
+  }
+  .index08 .idx08_contact {
+    padding: 60px 10px;
+  }
+  .index08 .idx08_contact .address {
+    font-size: 16px;
+  }
+  .index08 .idx08_link .thumb {
+    height: 80px;
+  }
+  .index08 .idx08_link .box {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .index01 .timetable table {
+    font-size: 1.4vw;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .index01 .timetable {
+    overflow: auto;
+  }
+  .index01 .timetable table {
+    font-size: 8px;
+    width: 550px;
+  }
+  .index01 .tbl_note {
+    display: block;
+  }
+  .index08 .idx08_link .col_l,
+  .index08 .idx08_link .col_r {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .index07 .box {
+    padding: 40px 5vw !important;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .index01 .inner_big {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .index01 .idx01_box_infor .infor_contact .tel {
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
   .idx_gallery ul li .img {
-    width: 225px;
-    height: 500px;
+    width: 220px;
+    height: 220px;
     background-size: 100% auto;
   }
 }
