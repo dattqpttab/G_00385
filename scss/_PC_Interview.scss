@@ -108,35 +108,62 @@
 
 .interview {
     &_catch {
-        --main-color: #50b9d0;
-        background-color: #fff;
-        border-radius: 30px;
-        border: 1px solid var(--main-color);
-        box-shadow: 0px 0px 20px 0px rgba(36, 33, 29, 0.15);
+        position: relative;
+        z-index: 1;
 
-        p {
-            font-size: 30px;
-            line-height: 1.5;
-            text-align: center;
-            font-weight: 500;
-            color: var(--main-color);
-            padding: 40px 10px;
+        &:before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/itv_catch01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            left: 50%;
+            height: 836px;
+            margin-left: -50vw;
+            z-index: -1;
         }
 
+        p {
+            font-size: 32px;
+            letter-spacing: 0.1em;
+            line-height: 1.71875;
+            text-align: center;
+            font-weight: 600;
+            color: var(--main-color);
+            font-family: var(--f-jp);
+            padding: 3.9em 3vw;
+        }
 
+        &.catch-top {
+            margin-top: -10em;
+            p {
+                padding-top: 6em;
+            }
+        }
+    
+
+        &.catch02 {
+            &:before {
+                background-image: url(../images/itv_catch02.jpg);
+            }
+        }
     }
 
     &_sec {}
 
     &_box {
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 80px;
 
         &.box_left {
             .interview_content {
-                margin-left: 80px;
+                margin-left: 60px;
             }
         }
 
@@ -144,40 +171,71 @@
             flex-direction: row-reverse;
 
             .interview_content {
-                margin-right: 80px;
+                margin-right: 60px;
+            }
+        }
+
+        .director {
+            display: block;
+            font-weight: 500;
+            color: var(--main-color);
+
+            &.dr02 {
+                margin-top: 10px;
+                color: var(--second-color);
             }
         }
     }
 
     &_img {
         position: relative;
-        width: 51%;
-
-        &:before {
-            content: counter(count, decimal-leading-zero);
-            counter-increment: count;
-
-            position: absolute;
-            bottom: 0.2em;
-            left: 40px;
-
-            line-height: 0.5;
-            font-size: 120px;
-            color: #fff;
+        width: 49%;
+        img {
+            border-radius: 16px;
         }
     }
 
     &_content {
         max-width: 464px;
-        width: calc(49% - 80px);
+        width: calc(51% - 60px);
 
-        h4 {}
+        h4 {
+            line-height: 2;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            padding: 0;
+            margin-bottom: 35px;
+            padding-left: 1.0769em;
+            background-color: transparent;
+            color: var(--main-color);
+
+            &:before {
+                content: counter(count04, decimal-leading-zero);
+                counter-increment: count04;
+                position: absolute;
+                top: -0.1375em;
+                left: -0.0375em;
+                line-height: 0.5;
+                font-size: 6em;
+                color: var(--clr1);
+                z-index: -1;
+                letter-spacing: 0;
+                font-weight: 500;
+                font-family: var(--f-rounded);
+                opacity: .05;
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 1280px) and (min-width: 769px) {
     .under {
-
+        .interview_catch {
+            p {
+                font-size: 28px;
+            }
+        }
         &.page-short-interview,
         &.page-interview {
             .key {
@@ -248,10 +306,10 @@
         }
 
         &_content {
-            width: calc(49% - 40px);
+            width: calc(51% - 40px);
 
             h4 {
-                font-size: 28px;
+                font-size: 22px;
             }
         }
 
@@ -260,9 +318,13 @@
                 font-size: 90px;
             }
 
-            img {
-                border-radius: 20px;
-            }
+           
         }
+    }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 769px) {
+    .interview_content h4 {
+        font-size: 20px;
     }
 }

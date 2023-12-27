@@ -132,6 +132,10 @@
   .under table.rollTable {
     width: 768px;
   }
+  .under table.tbl_style01 th,
+  .under table.tbl_style01 td {
+    line-height: 1.8;
+  }
   @supports (-webkit-touch-callout: none) {
     .under table.tbl_style01 {
       /* Specific to iOS devices */
@@ -202,7 +206,7 @@
   }
   .under .doctor_box .doctor_name {
     bottom: 3.5vw;
-    right: 3.5vw;
+    left: 3.5vw;
     font-size: 4vw;
     padding: 3vw 2vw;
   }
@@ -213,6 +217,16 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .under .timetable {
+    overflow: auto;
+  }
+  .under .timetable table {
+    width: 768px;
+    font-size: 9px;
+  }
+  .under .timetable table th, .under .timetable table td {
+    line-height: 1.8;
+  }
   .under .und_flow {
     font-size: 9px;
   }
@@ -271,7 +285,7 @@
     font-size: 1em;
   }
   .under .feature_box .box_ct .head {
-    padding-left: 7em;
+    padding-left: 6em;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -329,11 +343,24 @@
   }
   .interview_catch {
     margin-top: 0;
-    margin-bottom: 50px;
+  }
+  .interview_catch:before {
+    background-image: url(../images/itv_catch01_sp.jpg);
+    height: 500px;
+  }
+  .interview_catch.catch-top {
+    margin-top: -6em;
+  }
+  .interview_catch.catch-top p {
+    padding-top: 6em;
+  }
+  .interview_catch.catch02:before {
+    background-image: url(../images/itv_catch02_sp.jpg);
   }
   .interview_catch p {
     font-size: 20px;
     line-height: 1.4;
+    padding: 40px 10vw;
   }
   .interview_catch.fz20 {
     margin-top: 40px;
@@ -350,14 +377,14 @@
     margin: 0 auto;
   }
   .interview_img {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
   .interview_img:before {
     left: 20px;
     font-size: 70px;
   }
   .interview_box {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   .interview_box.box_left .interview_content {
     margin-left: auto;

@@ -122,9 +122,13 @@
 					<li>
 						<div class="item s1">
 							<div class="catch">
-								<h2><span>適切な治療法を</span><br><span>選択するための的確な内視鏡診断</span></h2>
-								<p><span>目に見えない消化器疾患</span><br>
-									<span>きちんとした治療をするために的確な内視鏡検査をご案内します</span>
+								<h2>
+									<span>適切な治療法を</span><br>
+									<span>選択するための的確な内視鏡診断</span>
+								</h2>
+								<p>
+									<span>目に見えない消化器疾患</span><br>
+									<span>きちんとした治療をするために<br class="sp_only">的確な内視鏡検査をご案内します</span>
 								</p>
 							</div>
 						</div>
@@ -132,24 +136,34 @@
 					<li>
 						<div class="item s2">
 							<div class="catch">
-								<h2>ダミーテキストダミーテキストダミー　</h2>
-								<p>ダミーテキストダミーテキストダミー　</p>
+								<h2>
+									<span>働く皆様にも無理なく内視鏡検査を</span><br>
+									<span>受けていただくために</span>
+								</h2>
+								<p>
+									<span>早朝の検査や土曜日の検査にも対応</span><br>
+									<span>働く皆様の検査のご希望に<br class="sp_only">可能な限りお応えします</span>
+								</p>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="item s3">
 							<div class="catch">
-								<h2>ダミーテキストダミーテキストダミー　</h2>
-								<p>ダミーテキストダミーテキストダミー　</p>
+								<h2>
+									<span>女性患者様も快適に検査を</span><br>
+									<span>受けられるクリニック</span>
+								</h2>
+								<p>
+									<span>女性医師による内視鏡検査が可能</span><br>
+									<span>女性患者様が安心して検査を<br class="sp_only">受けられる環境整備に注力しています</span>
+								</p>
 							</div>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</div>
-
-
 		<div id="mainContent">
 			<!--idx01-->
 			<section class="index01">
@@ -312,6 +326,14 @@
 					</div>
 				</div>
 			</section>
+
+			<!--map-->
+			<div class="idx_map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d689.676443771339!2d135.49851151444744!3d34.688213310487775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6e48b3e2775%3A0x179ef73b73590f76!2z44KA44KJ44Gu44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sus!4v1703557563566!5m2!1sja!2sus"
+					style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
 			<!---->
 			<section class="index02">
 				<div class="inner_big">
@@ -485,7 +507,7 @@
 				</div>
 				<div class="btn-group">
 					<p class="btn style01">
-						<a href="[url]/news/">医院紹介</a>
+						<a href="[url]/news/">医療機関様へ</a>
 					</p>
 				</div>
 			</section>
@@ -742,8 +764,8 @@
 									<li><a href="#">血便・便潜血陽性</a></li>
 									<li><a href="#">便秘・下痢</a></li>
 									<li><a href="#">大腸炎/大腸がん</a></li>
-									<li><a href="#">胃が痛い・みぞおちが痛い・<br>
-											背中が痛い</a></li>
+									<li><a href="#">胃が痛い・みぞおちが痛い・<span class="auto_br">背中が痛い</span>
+											</a></li>
 									<li><a href="#">女性のための内視鏡検査</a></li>
 									<li><a href="#">ビジネスマンのための<br>
 											内視鏡検査</a></li>
@@ -789,13 +811,10 @@
 		</div>
 		<div class="fixed_banner">
 			<div class="tel"><a href="tel:0000000000000" class="tel_click"></a>
-				<p><i>XX<span>-</span></i><i>XXXX<span>-</span></i>XXXX</p>
+				<p><i>06<span>-</span></i><i>6228<span>-</span></i>3232</p>
 			</div>
 			<div class="web"><a href="#" target="_blank"></a>
-				<p>WEB<br class="pc_only">予約</p>
-			</div>
-			<div class="mail"><a href="#" target="_blank"></a>
-				<p>お問い<br class="pc_only">合わせ</p>
+				<p>WEB予約</p>
 			</div>
 		</div>
 	</div>
@@ -808,7 +827,7 @@
 	<script defer type="text/javascript" src="js/grits.common.js"></script>
 	<script type="text/javascript">
 		$(window).on('load', function () {
-			$('.key_text').slick({
+			$('.key_text ul').slick({
 				accessibility: false,
 				infinite: true,
 				autoplay: true,

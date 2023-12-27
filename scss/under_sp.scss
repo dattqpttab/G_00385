@@ -185,7 +185,10 @@
 			}
 
 			&.tbl_style01 {
-				th {}
+				th,
+				td {
+					line-height: 1.8;
+				}
 
 				td {}
 
@@ -286,7 +289,7 @@
 
 			.doctor_name {
 				bottom: 3.5vw;
-				right: 3.5vw;
+				left: 3.5vw;
 				font-size: 4vw;
 				padding: 3vw 2vw;
 			}
@@ -313,7 +316,18 @@
 //under components
 @media only screen and (max-width: 768px) {
 	.under {
+		.timetable {
+			overflow: auto;
+	
+			table {
+				width: 768px;
+				font-size: 9px;
 
+				th,td {
+					line-height: 1.8;
+				}
+			}
+		}
 		//flow
 		.und_flow {
 			font-size: 9px;
@@ -400,7 +414,7 @@
 
 			.box_ct {
 				.head {
-					padding-left: 7em;
+					padding-left: 6em;
 				}
 			}
 

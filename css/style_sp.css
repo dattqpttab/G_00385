@@ -67,9 +67,32 @@ body:not(.ovh) .menu_toggle .inside {
   position: relative;
   overflow: hidden;
   color: var(--clr2);
+  width: 50%;
 }
 .menu_toggle ul li:before {
   background-color: var(--clr2);
+}
+.menu_toggle .ft_link .ttl {
+  color: var(--clr2);
+}
+@media only screen and (min-width: 769px) {
+  .menu_toggle .ft_link .menu01 {
+    width: 35%;
+  }
+}
+.menu_toggle .ft_link .menu01 ul {
+  max-height: 100%;
+}
+.menu_toggle .ft_link .menu01 ul li {
+  width: 100%;
+}
+.menu_toggle .ft_link .menu02 {
+  margin-top: 0;
+}
+@media only screen and (min-width: 769px) {
+  .menu_toggle .ft_link .menu02 {
+    width: 62%;
+  }
 }
 .menu_toggle p {
   margin-bottom: 0;
@@ -205,10 +228,30 @@ body:not(.ovh) .menu_toggle .inside {
 
 @media only screen and (max-width: 768px) {
   .ft_link .ttl {
-    font-size: calc(var(--ttl_size) + 0px);
+    font-size: calc(var(--ttl_size));
+    margin-bottom: 15px;
+  }
+  .ft_link a {
+    display: block;
+    border-bottom: 1px dashed var(--main-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .ft_link a:before {
+    top: 0.24em;
+  }
+  .ft_link a:hover {
+    color: var(--clr2);
   }
   .ft_link .menu01 {
     margin-bottom: 30px;
+  }
+  .ft_link ul {
+    max-height: 100%;
+  }
+  .ft_link ul li {
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 /* END Menu
@@ -409,25 +452,22 @@ Header & Footer
   .fixed_banner .tel p,
   .fixed_banner .web p,
   .fixed_banner .mail p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1;
   }
   .fixed_banner .tel p::before,
   .fixed_banner .web p::before,
   .fixed_banner .mail p::before {
-    height: 22px;
+    height: 20px;
   }
   .fixed_banner .tel {
-    width: 40%;
+    width: 50%;
   }
   .fixed_banner .tel p span {
     writing-mode: lr-tb;
   }
   .fixed_banner .web {
-    width: 30%;
-  }
-  .fixed_banner .mail {
-    width: 30%;
+    width: 50%;
   }
   .copyright {
     display: block;

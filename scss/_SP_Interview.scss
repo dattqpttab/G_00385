@@ -17,10 +17,12 @@
                 }
 
                 .catch {
+                
                     font-size: 8.75px;
                     text-align: center;
                     margin-left: auto;
                     margin-right: auto;
+                  
 
                     .idx_en,
                     h2 {
@@ -43,11 +45,28 @@
     .interview {
         &_catch {
             margin-top: 0;
-            margin-bottom: 50px;
+            &:before {
+                background-image: url(../images/itv_catch01_sp.jpg);
+                height: 500px;
+            }
+
+            &.catch-top {
+                margin-top: -6em;
+                p {
+                    padding-top: 6em;
+                }
+            }
+
+            &.catch02 {
+                &:before {
+                    background-image: url(../images/itv_catch02_sp.jpg);
+                }
+            }
 
             p {
                 font-size: 20px;
                 line-height: 1.4;
+                padding: 40px 10vw;
             }
 
             &.fz20 {
@@ -77,7 +96,7 @@
         }
 
         &_img {
-            margin-bottom: 25px;
+            margin-bottom: 50px;
 
             &:before {
                 left: 20px;
@@ -86,7 +105,7 @@
         }
 
         &_box {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
 
             // &:last-child{margin-bottom: 0px;}
             &.box_left {

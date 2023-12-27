@@ -120,17 +120,17 @@
 
 			p {
 
-				font-size: 13px;
+				font-size: 14px;
 				line-height: 1;
 
 				&::before {
-					height: 22px;
+					height: 20px;
 				}
 			}
 		}
 
 		.tel {
-			width: 40%;
+			width: 50%;
 
 			p {
 				span {
@@ -140,16 +140,12 @@
 		}
 
 		.web {
-			width: 30%;
+			width: 50%;
 
 			p {}
 		}
 
-		.mail {
-			width: 30%;
-
-			p {}
-		}
+		
 	}
 
 	.copyright {
@@ -162,6 +158,8 @@
 		}
 	}
 }
+
+
 
 @media only screen and (max-width: 640px) {
 
