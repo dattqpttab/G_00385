@@ -155,6 +155,188 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .index02 h3 {
+    margin-bottom: 15px;
+  }
+  .index02 .btn-group {
+    margin-top: 15px;
+  }
+  .index02 .btn-group .btn {
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .index03 {
+    padding: 60px 0;
+    background-image: url(../images/idx03_bg_sp.jpg);
+    background-position: center;
+  }
+  .index03 .block_trouble_content {
+    max-width: 640px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 40px 8%;
+  }
+  .index03 .block_trouble_content::before {
+    font-size: 5.5px;
+  }
+  .index03 .block_trouble_img {
+    max-width: 320px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .index03 .listcheck li {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+  .index03 .btn-group .btn {
+    margin-top: 25px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .index03 .block_trouble_content::before {
+    font-size: 1.302vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .index04 {
+    padding: 60px 0;
+  }
+  .index04 h4 {
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .index04 .block_reason_item {
+    min-height: 355px;
+    max-height: 450px;
+    height: 90vw;
+  }
+  .index04 .block_reason_item:nth-child(1) .block_reason_img img {
+    object-position: right;
+  }
+  .index04 .block_reason_item:nth-child(3)::before {
+    background-color: #495c2a;
+  }
+  .index04 .block_reason_item:nth-child(3)::after {
+    background-color: #95bb58;
+  }
+  .index04 .block_reason_item:nth-child(3) .block_reason_num::before {
+    background-color: #95bb58;
+  }
+  .index04 .block_reason_item:nth-child(4)::before {
+    background-color: #645844;
+  }
+  .index04 .block_reason_item:nth-child(4)::after {
+    background-color: #f8ae33;
+  }
+  .index04 .block_reason_item:nth-child(4) .block_reason_num::before {
+    background-color: #f8ae33;
+  }
+  .index04 .block_reason_content {
+    padding: 34px 18px 22px;
+  }
+  .index04 .block_reason_num {
+    left: 18px;
+    font-size: 10px;
+    padding: 1em 1.5em;
+  }
+  .index04 .block_reason_num span {
+    font-size: 300%;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .index04 h4 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .index05 {
+    padding: 60px 0;
+  }
+  .index05 .block_endoscopy {
+    padding: 0 20px;
+  }
+  .index05 .block_endoscopy_content {
+    gap: 5px;
+  }
+  .index05 .block_endoscopy .col {
+    padding: 40px 10px 40px;
+  }
+  .index05 .block_endoscopy .col_left {
+    background-image: url(../images/idx05_bg01_sp.jpg);
+    border-bottom: 1px solid #503320;
+  }
+  .index05 .block_endoscopy .col_right {
+    background-image: url(../images/idx05_bg02_sp.jpg);
+  }
+  .index05 .block_endoscopy .item {
+    padding: 15px 5px 21px;
+    max-width: 190px;
+    width: calc(50% - 5px);
+  }
+  .index05 .block_endoscopy .title {
+    font-size: 15px;
+    letter-spacing: 0em;
+  }
+  .index05 .btn-group .btn {
+    margin-top: 25px;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .index05 .block_endoscopy .title {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .index06 {
+    padding: 60px 0;
+    background-image: url(../images/idx06_bg_sp.jpg);
+  }
+  .index06 .block_menu_item {
+    width: calc(50% - 16px);
+    margin: 8px;
+    padding: 18px 15px 18px;
+  }
+  .index06 .block_menu_item figure {
+    margin-right: 2vw;
+    max-width: 50px;
+  }
+  .index06 .block_menu_item .title {
+    font-size: 3vw;
+    letter-spacing: 0.05em;
+  }
+  .index06 .TabContainer .TabPager li {
+    padding: 11px 10px 13px;
+  }
+  .index06 .TabContainer .TabPager li .tt {
+    font-size: 18px;
+  }
+  .index06 .TabContainer .TabContent {
+    border-radius: 15px;
+  }
+  .index06 .TabContainer .TabContent > ul > li {
+    padding: 20px 15px 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .index06 .block_menu_item {
+    width: 100%;
+  }
+  .index06 .block_menu_item .title {
+    font-size: 18px;
+  }
+  .index06 .TabContainer .TabPager li .tt {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .index06 .TabContainer .TabPager li .tt {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
   .idx_gallery ul li .img {
     width: 220px;
     height: 220px;
