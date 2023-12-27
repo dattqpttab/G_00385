@@ -1212,6 +1212,9 @@ footer .ft_map iframe {
   height: 100%;
 }
 
+.ft_link {
+  font-size: 10px;
+}
 .ft_link a {
   text-decoration: none;
 }
