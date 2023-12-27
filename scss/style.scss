@@ -791,6 +791,74 @@ figure ,picture{
 .auto_br {
     display: inline-block;
 }
+
+.timetable {
+    margin-bottom: 10px;
+	table {
+		font-size: 10px;
+		th,
+		td {
+			border: none;
+			letter-spacing: 0.05em;
+			font-size: 1.5em;
+			line-height: 1.6;
+
+			&:first-child {
+				width: 30%;
+				padding-left: 4.2%;
+			}
+
+			&:nth-child(2) {
+				width: 23%;
+			}
+
+			&:nth-child(n + 3) {
+				width: 7.83%;
+				padding-left: 0.3333em;
+			}
+		}
+
+		th {
+			background-color: #fcd626;
+			font-weight: 600;
+			padding: 0.666667em 0.66667em 0.533333em;
+			text-align: left;
+		}
+
+		td {
+			background-color: #fff8dc;
+			padding: 0.666667em 0.66667em 0.466667em;
+
+			&:first-child {
+				font-weight: 600;
+
+			}
+		}
+
+		tr {
+			&:not(:first-child, :last-child) {
+				border-bottom: 1px solid #dcd1a4;
+			}
+
+			&:last-child {
+				td {
+					padding-bottom: 1.1333333em;
+				}
+			}
+		}
+	}
+
+
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .timetable {
+        table {
+            font-size: 9px;
+        }
+    }
+}
+
 //end components
 
 .slick-arrow {

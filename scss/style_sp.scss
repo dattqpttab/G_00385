@@ -76,9 +76,36 @@ body:not(.ovh) {
             position: relative;
             overflow: hidden;
             color: var(--clr2);
+            width: 50%;
             &:before {
                 background-color: var(--clr2);
             }
+        }
+    }
+    .ft_link  {
+       
+        .ttl{
+            color: var(--clr2);
+        }
+        
+
+        .menu01 {
+          @include screen("min769") {
+            width: 35%;
+          }
+            ul {
+                max-height: 100%;
+                li {
+                    width: 100%;
+                }
+            }
+        }
+        .menu02 {
+            
+            @include screen("min769") {
+                width: 62%;
+              }
+            margin-top: 0;
         }
     }
 
@@ -234,11 +261,36 @@ body:not(.ovh) {
 @media only screen and (max-width: 768px) {
     .ft_link {
         .ttl {
-            font-size: calc(var(--ttl_size) + 0px);
+            font-size: calc(var(--ttl_size));
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: block;
+            border-bottom: 1px dashed var(--main-color);
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &:before {
+                top:.24em;
+            }
+            &:hover {
+                color: var(--clr2);
+            }
+         
         }
 
         .menu01 {
             margin-bottom: 30px;
+        }
+
+        ul {
+            max-height: 100%;
+           li {
+            width: 100%;
+            margin-bottom: 0;
+         
+           }
         }
 
     }
