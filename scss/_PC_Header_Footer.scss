@@ -13,7 +13,9 @@ header {
 }
 
 header.active,
-.ovh header {}
+.ovh header {
+	box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
+}
 
 .header_top {
 	display: flex;
@@ -166,7 +168,7 @@ header.active,
 			}
 
 			ul {
-				background-color: rgba($color: #000, $alpha: 1.0);
+				background-color: var(--main-color);
 				padding-bottom: 10px;
 
 				li {
@@ -204,7 +206,7 @@ header.active,
 @media only screen and (min-width: 769px) {
 	.pc_navi>ul .col2 {
 		.subInner {
-			width: 440px;
+			width: 45em;
 
 			ul {
 				display: flex;
@@ -243,19 +245,20 @@ header.active,
 	}
 
 	.right_head {
-		padding-right: calc(var(--wrapper) - 5px);
+		padding-right: calc(var(--wrapper) + 15px);
 	}
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
 
 	.pc_navi {
+		font-size: 9px;
 		>ul {
 			>li {
 
 				>a,
 				p {
-					font-size: 1.5vw;
+					// font-size: 1.5vw;
 
 
 				}
@@ -280,6 +283,8 @@ header.active,
 		--ttl_size: 22px;
 		--wrapper: 80px;
 	}
+	.pc_navi {
+		font-size: 1vw; }
 }
 
 .totop {
@@ -389,7 +394,7 @@ header.active,
 
 .fixed_banner {
 	position: fixed;
-	top: 200px;
+	top: 460px;
 	right: 0px;
 	z-index: 15;
 	transition: right 0.3s ease-in-out;
@@ -441,7 +446,7 @@ header.active,
 			background-size: auto 100%;
 			display: block;
 			width: 100%;
-			margin-bottom: 6px;
+			margin-bottom: 4px;
 		}
 	}
 
@@ -459,6 +464,9 @@ header.active,
 
 			i {
 				font-style: normal;
+				@include screen("min769") {
+					display: block;
+				}
 			}
 
 			span {
@@ -504,19 +512,20 @@ header.active,
 
 			p {
 				font-size: 2.6em;
-				padding-top: 0.30769em;
+				padding-top: 0.230769em;
 
 				&::before {
-					height: 1.01em;
+					height: 1.03846em;
 				}
 			}
 		}
 
 		.web {
 			p {
+				padding-top: 3px;
 				&::before {
 					height: 1.7222em;
-					margin-bottom: 11px;
+					margin-bottom: 12px;
 				}
 			}
 		}
@@ -537,8 +546,12 @@ header.active,
 		font-size: 8.75px;
 	}
 }
-
-@media only screen and (min-width:769px) and (max-height:600px) {
+@media only screen and (min-width:769px) and (max-height:700px) {
+	.fixed_banner {
+		top: 200px;
+	}
+}
+@media only screen and (min-width:769px) and (max-height:500px) {
 	.fixed_banner {
 		display: flex;
 		flex-wrap: wrap;
@@ -583,6 +596,9 @@ header.active,
 			width: 50%;
 
 			p {
+				i {
+					display: inline;
+				}
 				span {
 					writing-mode: lr-tb;
 				}
@@ -688,7 +704,10 @@ footer {
 	.ft_map {
 		max-height: 450px;
 		height: 42vw;
-		max-width: 565px;
+		@include screen("min769") {
+			padding-right: 1.99vw;
+		}
+
 
 		iframe {
 			height: 100%;
@@ -894,7 +913,11 @@ footer {
 		}
 	}
 }
-
+@media only screen and (min-width: 769px) and (max-width: 1366px) {
+	footer .ft_map {
+		padding-right: 0;
+	}
+}
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
 	footer {
 		.ft_link {

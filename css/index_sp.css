@@ -203,6 +203,9 @@
   .index01 .idx01_box_infor .infor_contact .tel {
     font-size: 20px;
   }
+  .index08 .idx08_contact .address {
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .index02 h3 {

@@ -228,7 +228,7 @@ body:not(.ovh) .menu_toggle .inside {
 
 @media only screen and (max-width: 768px) {
   .ft_link .ttl {
-    font-size: calc(var(--ttl_size));
+    font-size: 30px;
     margin-bottom: 15px;
   }
   .ft_link a {
@@ -252,6 +252,7 @@ body:not(.ovh) .menu_toggle .inside {
   .ft_link ul li {
     width: 100%;
     margin-bottom: 0;
+    font-size: 14px;
   }
 }
 /* END Menu

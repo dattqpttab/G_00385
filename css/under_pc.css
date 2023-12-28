@@ -18,6 +18,7 @@
   position: relative;
   box-sizing: border-box;
   text-decoration: none;
+  letter-spacing: 0.1em;
 }
 .under .sitemap > ul > li a:before,
 .under .sitemap > ul > li p:before {
@@ -30,12 +31,23 @@
   top: 50%;
   margin-top: -2px;
 }
+.under .sitemap > ul > li p {
+  padding-left: 36px;
+  color: var(--main-color);
+  font-size: calc(var(--ttl_size) + 14px);
+  font-weight: 400;
+  line-height: 1;
+  font-family: var(--f-mincho);
+}
+.under .sitemap > ul > li p:before {
+  background-color: var(--main-color);
+}
 .under .sitemap > ul > li p:after {
   content: "";
   position: absolute;
   width: 3px;
   height: 14px;
-  background: #ccc;
+  background: var(--main-color);
   left: 6px;
   top: 50%;
   margin-top: -7px;
@@ -1989,12 +2001,13 @@
   text-decoration: none;
   cursor: pointer;
   -webkit-appearance: none;
+  font-family: var(--f-mincho);
 }
 .contact-form-style01 .input_btn input[type=button]:hover,
 .contact-form-style01 .input_btn input[type=submit]:hover,
 .contact-form-style01 .button.thanks_btn a:hover {
   opacity: 1;
-  background-color: #ccc;
+  background-color: var(--second-color);
 }
 .contact-form-style01 .input_btn input[type=button],
 .contact-form-style01 .input_btn input[type=submit],
