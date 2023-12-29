@@ -33,7 +33,6 @@
             h2 {
                 margin-bottom: 4vw;
                 font-size: 4vw;
-
             }
 
             p {
@@ -41,7 +40,8 @@
             }
 
             .catch {
-                padding-bottom: 6vw;
+                padding-bottom: 6vmin;
+                width: 100%;
             }
 
             .s1 {
@@ -79,6 +79,15 @@
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     .home_page .key {
         font-size: 1.1vmin;
+
+        h2 {
+            font-size: 5vmin;
+
+        }
+
+        p {
+            font-size: 3vmin;
+        }
     }
 }
 
@@ -90,8 +99,25 @@
             }
 
             p {
-                font-size: 4.3vw;
+                font-size: 4vw;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .home_page {
+        .key {
+            h2 {
+                font-size: 5.5vw;
+
+                .br_375 {
+                    display: block;
+                }
+
+            }
+
+
         }
     }
 }
@@ -110,7 +136,7 @@
     .home_page {
         h3 {
             margin-bottom: 30px;
-            font-size: calc(var(--ttl_size) - 2px);
+            font-size: calc(var(--ttl_size) + 2px);
         }
     }
 }
@@ -130,7 +156,9 @@
                 font-size: 9px;
             }
         }
-
+        h3 .en.big {
+            font-size: 2em;
+        }
         .label {
             font-size: 7px;
         }
@@ -142,6 +170,7 @@
         .idx01_box_infor {
             #calendar {
                 height: 300px;
+                padding: 5px;
             }
 
             .box_left,
@@ -160,7 +189,7 @@
                 margin-top: 20px;
                 flex-direction: column;
                 align-items: center;
-               
+
             }
 
             .infor_contact {
@@ -170,6 +199,7 @@
 
         .news-group {
             justify-content: center;
+
             .box_news {
                 padding: 30px 20px;
             }
@@ -197,6 +227,7 @@
 
     .index07 {
         padding: 40px 20px;
+        background-image: url(../images/idx07_bg_sp.jpg);
 
         .box {
             width: 100%;
@@ -205,9 +236,15 @@
             margin-right: auto;
             min-height: 400px;
             padding: 40px !important;
+            background-image: url(../images/idx07_box_bg01_sp.jpg);
+
+            &:nth-child(2n) {
+                background-image: url(../images/idx07_box_bg02_sp.jpg);
+            }
 
             .ttl {
                 font-size: 20px;
+
                 &:after {
                     margin-left: auto;
                     margin-right: auto;
@@ -215,10 +252,11 @@
             }
 
         }
-        .btn-group{
-          .btn {
-            margin: 0 auto;
-          }
+
+        .btn-group {
+            .btn {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -264,11 +302,10 @@
 @media only screen and (max-width: 520px) {
     .index01 {
         .timetable {
-            overflow: auto;
+
 
             table {
-                font-size: 8px;
-                width: 550px;
+                font-size: 6px;
             }
         }
 
@@ -289,7 +326,7 @@
 }
 
 @media only screen and (max-width: 425px) {
-   .home_page {
+    .home_page {
         h3 {
             .en {
                 &.big {
@@ -298,12 +335,25 @@
             }
         }
     }
+
     .index01 h3 .en.big {
         font-size: 8vw;
     }
+
     .index07 {
         .box {
             padding: 40px 5vw !important;
+        }
+    }
+
+    .index01 {
+        .inner_big {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .idx01_box_infor .note {
+            margin-left: 5px;
         }
     }
 }
@@ -363,7 +413,7 @@
 
             &_img {
                 max-width: 320px;
-                width: 60%;
+                width: 85%;
                 margin: 0 auto;
             }
         }
@@ -433,7 +483,7 @@
 
                     .block_reason_num {
                         &::before {
-                            background-color: #95bb58;
+                            // background-color: #95bb58;
                         }
                     }
                 }
@@ -449,7 +499,7 @@
 
                     .block_reason_num {
                         &::before {
-                            background-color: #f8ae33;
+                            // background-color: #f8ae33;
                         }
                     }
                 }
@@ -495,13 +545,16 @@
             .col {
                 padding: 40px 10px 40px;
 
+
                 &_left {
                     background-image: url(../images/idx05_bg01_sp.jpg);
+                    background-position: top left;
                     border-bottom: 1px solid #503320;
                 }
 
                 &_right {
                     background-image: url(../images/idx05_bg02_sp.jpg);
+                    background-position: top right;
                 }
             }
 
@@ -514,14 +567,15 @@
             .title {
                 font-size: 15px;
                 letter-spacing: 0em;
+                margin-bottom: 5px;
             }
         }
 
-         .block_endoscopy_ttl {
+        .block_endoscopy_ttl {
             h4 {
                 font-size: 22px;
             }
-         }
+        }
 
         .btn-group {
             .btn {
@@ -567,6 +621,10 @@
 
         .TabContainer {
             .TabPager {
+                @include iOS() {
+                    transform: translateY(.1px);
+                }
+
                 li {
                     padding: 11px 10px 13px;
 
@@ -578,6 +636,7 @@
 
             .TabContent {
                 border-radius: 15px;
+                position: relative;
 
                 >ul {
                     >li {
@@ -613,7 +672,7 @@
     }
 }
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 375px) {
     .index06 {
         .TabContainer {
             .TabPager {
@@ -622,6 +681,18 @@
                         font-size: 16px;
                     }
                 }
+            }
+        }
+    }
+
+    .index05 {
+        .block_endoscopy {
+            .col_left {
+                background-position: left -60px top;
+            }
+
+            .col_right {
+                background-position: right -60px top;
             }
         }
     }

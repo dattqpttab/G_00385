@@ -62,12 +62,29 @@
 			margin-bottom: 0.57143em;
 			font-size: 4.2em;
 
+
+			.br_375 {
+				display: none;
+			}
+
 			span {
 				background-color: rgba($color: #f7a94f, $alpha: 0.9);
 				margin-bottom: 0.309524em;
 				padding: 2px 31px 4px 36px;
 				max-height: 66px;
 			}
+
+			// @include screen("min769") {
+			// 	.pc {
+			// 		display: table;
+			// 		margin-left: auto;
+			// 		margin-right: auto;
+			// 		background-color: rgba($color: #f7a94f, $alpha: 0.9);
+			// 		margin-bottom: 0.309524em;
+			// 		padding: 2px 31px 4px 36px;
+			// 		max-height: 66px;
+			// 	}
+			// }
 		}
 
 		p {
@@ -117,7 +134,7 @@
 				font-weight: 500;
 				line-height: .8;
 				color: var(--second-color);
-				opacity: 10%;
+				opacity: 8%;
 
 			}
 
@@ -151,6 +168,12 @@
 	}
 }
 
+@media only screen and (min-width: 1921px) {
+	.home_page .key .key_text .item {
+		background-position: top -100px center;
+
+	}
+}
 
 @media only screen and (min-width: 1441px) {
 	.home_page {
@@ -163,12 +186,13 @@
 		}
 	}
 }
+
 @media only screen and (min-width: 769px) {
-.home_page {
-	h3 {
-		// padding-left: 8px;
+	.home_page {
+		h3 {
+			// padding-left: 8px;
+		}
 	}
-}
 }
 
 @media only screen and (min-width: 769px) {
@@ -253,6 +277,10 @@ section {
 .index01 {
 	padding: 80px 40px;
 	background-image: url(../images/idx01_bg.jpg);
+
+	.not_br {
+		white-space: nowrap;
+	}
 
 	.rwdFrame {
 		position: relative;
@@ -341,7 +369,7 @@ section {
 		margin-bottom: 40px;
 
 		.box_left {
-			width: 48%;
+			width: 49%;
 		}
 
 		.infor_contact {
@@ -377,7 +405,7 @@ section {
 			}
 
 			.tel {
-				color: var(--main-color);
+				color: #6da01b;
 				font-size: 1.5em;
 				font-weight: 400;
 				line-height: 1.1;
@@ -385,11 +413,17 @@ section {
 		}
 
 		#calendar {
-			padding: 5px 0px 2px 10px;
+			padding: 5px 5px;
+		
 			height: 60vw;
 			max-height: 450px;
 			box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 			background-color: white;
+
+			@media only screen and (min-width: 1441px) {
+				margin-left: 5px;
+				margin-right: 5px;
+			} 
 		}
 
 		//================================================================================
@@ -443,6 +477,9 @@ section {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		max-width: 1164px;
+		margin-left: auto;
+		margin-right: auto;
 
 		@include screen("min769") {
 			padding-left: 4px;
@@ -451,6 +488,7 @@ section {
 
 	.box_news {
 		position: relative;
+		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -462,6 +500,7 @@ section {
 
 		&::after {
 			@include before;
+			z-index: -1;
 			top: 5px;
 			bottom: 5px;
 			right: 5px;
@@ -535,6 +574,8 @@ section {
 
 
 .index02 {
+	max-width: 1920px;
+	margin: 0 auto;
 	padding: 79px 0 122px;
 	background-image: url(../images/idx02_bg01.png), url(../images/idx02_bg02.png);
 	background-repeat: no-repeat;
@@ -576,11 +617,26 @@ section {
 @media only screen and (max-width: 1700px) and (min-width: 769px) {
 	.index02 {
 		padding-bottom: 80px;
-		background-position: left -8vw top, right -14vw top;
+		background-position: left -2vw top, right -2vw top;
 		background-size: auto 100%, auto 100%;
 
 		.block_greeting {
 			width: 80%;
+			position: relative;
+			z-index: 1;
+
+			&::before {
+				@include before;
+				left: -5%;
+				top: -5%;
+				z-index: -1;
+				width: 110%;
+				height: 110%;
+				background-color: white;
+				filter: blur(20px);
+				opacity: .5;
+			}
+
 		}
 
 		.btn-group {
@@ -609,7 +665,8 @@ section {
 
 @media only screen and (max-width: 1000px) {
 	.index02 {
-		background-position: left 0 top, right 0 top;
+		background-image: url(../images/idx02_bg_full.jpg);
+		background-position: left 0 top;
 		background-size: auto 47vw;
 		padding-top: 47vw;
 		padding-bottom: 0;
@@ -726,6 +783,13 @@ section {
 		.listcheck {
 			padding-left: 11px;
 		}
+	}
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 769px) {
+	.index03 .block_trouble_img {
+		max-width: 600px;
+		margin-left: -10px;
 	}
 }
 
@@ -961,6 +1025,18 @@ section {
 	}
 }
 
+@media only screen and (max-width: 1280px) and (min-width: 769px) {
+	.index04 {
+		.block_reason_item {
+			align-items: flex-start;
+			padding-top: 15%;
+		}
+
+		.block_reason_content {}
+	}
+}
+
+
 .index05 {
 	padding: 62px 0 79px;
 
@@ -1051,7 +1127,7 @@ section {
 			gap: 10px;
 
 			.item {
-				background-color: #fff;
+				background-color: rgba($color: #ffffff, $alpha: 0.9);
 				border-radius: 6px;
 				text-align: center;
 				padding: 15px 10px 26px;
@@ -1199,6 +1275,14 @@ section {
 	}
 }
 
+@media only screen and (max-width: 1280px) and (min-width: 769px) {
+	.index05 {
+		.block_endoscopy .title {
+			margin-bottom: 5px;
+		}
+	}
+}
+
 @media only screen and (max-width: 1000px) and (min-width: 769px) {
 	.index05 {
 		.block_endoscopy {
@@ -1237,7 +1321,7 @@ section {
 			padding: 23px 24px 23px;
 			position: relative;
 
-			transition:all .3s;
+			transition: all .3s;
 
 			&::after {
 				content: '';
@@ -1307,7 +1391,7 @@ section {
 				&::before {
 					content: '';
 					position: absolute;
-					bottom: -7px;
+					bottom: -6px;
 					opacity: 0;
 					left: 0;
 					right: 0;
@@ -1316,9 +1400,9 @@ section {
 					background-color: #f7a94f;
 					clip-path: polygon(100% 0, 0 0, 50% 100%);
 					margin: auto;
-					transform: translateY(-10px);
+					// transform: translateY(-10px);
 					transition: 0.3s all;
-					z-index: -1;
+					z-index: 1;
 				}
 
 				.tt {
@@ -1332,7 +1416,7 @@ section {
 					background-color: #f7a94f;
 
 					&::before {
-						transform: translateY(0px);
+						// transform: translateY(0px);
 						opacity: 1;
 					}
 				}
@@ -1360,6 +1444,8 @@ section {
 		}
 	}
 }
+
+
 
 @media only screen and (max-width: 1400px) and (min-width: 769px) {
 	.index06 {
@@ -1423,6 +1509,12 @@ section {
 	}
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+	.index06 .TabContainer .TabPager li {
+		max-width: 260px;
+	}
+}
+
 //index07-m
 .index07 {
 	background: url(../images/idx07_bg.jpg) no-repeat center/cover;
@@ -1483,6 +1575,12 @@ section {
 
 		.btn.style01 a {
 			background-color: var(--mode-color);
+
+			@include screen("min769") {
+				&:hover {
+					background-color: var(--clr2);
+				}
+			}
 		}
 	}
 
@@ -1498,6 +1596,8 @@ section {
 	}
 }
 
+
+
 //index_banner-m
 .index_banner {
 	display: flex;
@@ -1510,12 +1610,19 @@ section {
 		margin: 5px 12px;
 		width: 310px;
 		text-align: center;
+		transition: all .3s;
 
 		&.bnr01 {
 			@include screen("min769") {
 				padding-right: 5px;
 			}
 
+		}
+
+		@include screen("min769") {
+			&:hover {
+				opacity: .8;
+			}
 		}
 	}
 }
@@ -1681,13 +1788,28 @@ section {
 	}
 }
 
+@media only screen and (max-width: 1440px) and (min-width: 769px) {
+	.index01  {
+		.news-group {
+			max-width: 100%;
+		}
+		
+		.box_news  {
+			width: 49%;
+			max-width: 100%;
 
+
+		}
+		
+	}
+}
 @media only screen and (max-width: 1366px) and (min-width: 769px) {
 
 	.index01 {
 		.label {
 			font-size: 9px;
 		}
+
 		.inner_big {
 			padding: 80px 30px 60px;
 		}
@@ -1698,7 +1820,7 @@ section {
 			}
 		}
 	}
-	
+
 	.index07 {
 		.box {
 			padding: 40px;
@@ -1706,6 +1828,34 @@ section {
 
 			&:nth-child(2n) {
 				padding-left: 20px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+	.index07 {
+		.box .content {
+			.btn-group {
+				.btn {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+
+		.box {
+			padding: 40px 20px;
+
+			&:nth-child(2n) {
+				padding: 40px 20px;
+			}
+
+			.ttl {
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+				}
 			}
 		}
 	}
@@ -1776,11 +1926,12 @@ section {
 		--ttl_size: 22px;
 
 	}
+
 	.index01 {
 		h3 {
 			.en {
 				&.big {
-					font-size: 9vw;
+					font-size: 8vw;
 				}
 			}
 		}

@@ -1,4 +1,7 @@
 @media only screen and (max-width: 768px) {
+  .under .blog_list_style01 .item .info .button a span {
+    font-size: 120%;
+  }
   .under #mainContent {
     padding-bottom: 50px;
   }
@@ -32,7 +35,7 @@
 }
 @media only screen and (max-width: 768px) {
   .under .inner > section:first-child > h3 {
-    margin-top: 81px;
+    margin-top: 40px;
   }
   .under section {
     padding-top: 1px;
@@ -47,7 +50,7 @@
     padding-top: 30px;
   }
   .under .toc_list {
-    padding: 30px 20px;
+    padding: 20px 20px;
   }
   .under .toc_list li {
     width: 100%;
@@ -129,12 +132,15 @@
   .under .clinic_tbl02 th:first-child {
     width: 200px;
   }
+  .under table.tbl_style01 th {
+    width: 37%;
+  }
   .under table.rollTable {
     width: 768px;
   }
   .under table.tbl_style01 th,
   .under table.tbl_style01 td {
-    line-height: 1.8;
+    line-height: 1.5;
   }
   @supports (-webkit-touch-callout: none) {
     .under table.tbl_style01 {
@@ -224,7 +230,8 @@
     width: 768px;
     font-size: 9px;
   }
-  .under .timetable table th, .under .timetable table td {
+  .under .timetable table th,
+  .under .timetable table td {
     line-height: 1.8;
   }
   .under .und_flow {
@@ -242,14 +249,17 @@
     border-top: 2.5em solid var(--mode-color);
   }
   .under .flow_box .box_body:after {
-    font-size: 10em;
-    bottom: 0;
+    font-size: 8em;
+    bottom: 6px;
   }
   .under .flow_box .box_body p {
     font-size: 14px;
   }
   .under .und_feature {
     font-size: 9px;
+  }
+  .under .btn-group .btn.style01 {
+    margin-top: 30px;
   }
   .under .feature_box {
     padding: 40px;
@@ -274,7 +284,7 @@
 }
 @media only screen and (max-width: 520px) {
   .under .flow_box {
-    padding: 6em 25px 7em 7em;
+    padding: 4em 25px 5em 7em;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -360,7 +370,7 @@
   .interview_catch p {
     font-size: 20px;
     line-height: 1.4;
-    padding: 40px 10vw;
+    padding: 40px 10px;
   }
   .interview_catch.fz20 {
     margin-top: 40px;
@@ -376,8 +386,15 @@
     max-width: 590px;
     margin: 0 auto;
   }
+  .interview_content h4 {
+    line-height: 1.5;
+  }
+  .interview_content h4::before {
+    font-size: 4.5em;
+    top: -0.05em;
+  }
   .interview_img {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   .interview_img:before {
     left: 20px;
@@ -385,6 +402,9 @@
   }
   .interview_box {
     margin-bottom: 40px;
+  }
+  .interview_box .director {
+    font-size: 16px;
   }
   .interview_box.box_left .interview_content {
     margin-left: auto;

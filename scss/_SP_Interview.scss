@@ -66,7 +66,7 @@
             p {
                 font-size: 20px;
                 line-height: 1.4;
-                padding: 40px 10vw;
+                padding: 40px 10px;
             }
 
             &.fz20 {
@@ -92,11 +92,17 @@
         &_content {
             max-width: 590px;
             margin: 0 auto;
-
+            h4{
+                line-height: 1.5;
+                &::before{
+                    font-size: 4.5em;
+                    top: -0.05em;
+                }
+            }
         }
 
         &_img {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
 
             &:before {
                 left: 20px;
@@ -106,7 +112,7 @@
 
         &_box {
             margin-bottom: 40px;
-
+            .director{font-size: 16px;}
             // &:last-child{margin-bottom: 0px;}
             &.box_left {
                 .interview_content {

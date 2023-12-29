@@ -284,6 +284,9 @@ General
     bottom: 55px;
     right: 5px;
   }
+  .totop.active {
+    bottom: 55px;
+  }
   .totop .icon {
     width: 50px;
     height: 50px;
@@ -472,8 +475,8 @@ Header & Footer
   }
   .copyright {
     display: block;
-    padding-top: 30px;
-    padding-bottom: 80px;
+    padding-top: 20px;
+    padding-bottom: 65px;
   }
   .copyright .flex {
     justify-content: center;

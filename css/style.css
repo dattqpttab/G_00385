@@ -369,6 +369,21 @@ a img.aligncenter {
     display: none !important;
   }
 }
+@media only screen and (min-width: 450px) {
+  .sp_450 {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 376px) {
+  .sp_375 {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 321px) {
+  .sp_320 {
+    display: none !important;
+  }
+}
 .accBtn::before, .accBtn::after {
   transition: all 0.3s ease-in-out;
 }
@@ -590,6 +605,7 @@ figure, picture {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 3.66667em;
   padding: 0.5em 1.4em;
   position: relative;
@@ -608,10 +624,10 @@ figure, picture {
   opacity: 1;
 }
 @media only screen and (min-width: 769px) {
-  .btn-group .btn.style01 a:hover {
+  .btn-group .btn.style01 a:not([target*=_blank]):hover {
     background-color: var(--clr2);
   }
-  .btn-group .btn.style01 a:hover::after {
+  .btn-group .btn.style01 a:not([target*=_blank]):hover::after {
     transform: translateX(5px);
   }
 }
@@ -902,7 +918,7 @@ header.active,
 }
 .pc_navi > ul .subInner {
   position: absolute;
-  width: 220px;
+  width: 30em;
   right: 50%;
   bottom: -15px;
   padding-top: 0px;
@@ -910,7 +926,7 @@ header.active,
   transition: all 0.2s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  z-index: 1;
+  z-index: 15;
 }
 .pc_navi > ul .subInner.active {
   opacity: 1;
@@ -923,10 +939,15 @@ header.active,
 .pc_navi > ul .subInner ul li {
   padding: 0 10px;
 }
+.pc_navi > ul .subInner ul li.custom a {
+  min-height: 5.8em;
+  display: flex;
+  align-items: center;
+}
 .pc_navi > ul .subInner ul li a {
   position: relative;
   display: block;
-  padding: 19px 10px 19px 28px;
+  padding: 1.35714em 0.7142857em 1.35714em 2em;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.7);
   transition: all 0.2s ease;
   font-size: 14px;
@@ -948,7 +969,7 @@ header.active,
 
 @media only screen and (min-width: 769px) {
   .pc_navi > ul .col2 .subInner {
-    width: 45em;
+    width: 55em;
   }
   .pc_navi > ul .col2 .subInner ul {
     display: flex;
@@ -959,7 +980,7 @@ header.active,
   }
   .menu_toggle .inside .ft_link {
     width: 100%;
-    max-width: 900px;
+    max-width: 1147px;
     margin: auto;
     min-height: 100%;
     display: flex;
@@ -972,6 +993,9 @@ header.active,
 @media only screen and (min-width: 769px) and (max-width: 1440px) {
   .header_top {
     padding: 5px 5px 5px 20px;
+  }
+  .logo {
+    max-width: 260px;
   }
   .right_head {
     padding-right: calc(var(--wrapper) + 15px);
@@ -1001,20 +1025,22 @@ header.active,
   cursor: pointer;
   position: fixed;
   z-index: 19;
-  bottom: 45px;
-  right: 45px;
+  bottom: 53px;
+  right: 41px;
 }
 .totop.active {
   opacity: 1;
   visibility: visible;
+  right: 10px;
+  bottom: 20px;
 }
 .totop .icon {
   background-image: url(../images/totop.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
   border: 0px;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin: 0;
 }
 
@@ -1120,9 +1146,6 @@ header.active,
   position: relative;
   transition: all 0.3s ease;
 }
-.fixed_banner > div:not(.tel):hover {
-  opacity: 0.7;
-}
 .fixed_banner a {
   position: absolute;
   top: 0;
@@ -1169,6 +1192,11 @@ header.active,
   background-image: url("../images/shared_fixed_bnr_icon02.png");
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1566px) {
+  .fixed_banner {
+    top: 300px;
+  }
+}
 @media only screen and (min-width: 769px) {
   .fixed_banner {
     font-size: 10px;
@@ -1214,6 +1242,9 @@ header.active,
   }
 }
 @media only screen and (min-width: 769px) and (max-height: 500px) {
+  .totop.active {
+    bottom: 55px;
+  }
   .fixed_banner {
     display: flex;
     flex-wrap: wrap;
@@ -1504,7 +1535,7 @@ footer .ft_map iframe {
 }
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
   footer .ft_link {
-    font-size: 8px;
+    font-size: 9px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {

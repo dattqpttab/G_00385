@@ -98,7 +98,7 @@
 
         #mainContent {
             .inner {
-                max-width: 1280px;
+                max-width: 1300px;
             }
         }
     }
@@ -133,14 +133,12 @@
             font-weight: 600;
             color: var(--main-color);
             font-family: var(--f-jp);
-            padding: 3.9em 3vw;
+            padding: 3.9em 3vw 3.3em;
         }
 
         &.catch-top {
-            margin-top: -10em;
-            p {
-                padding-top: 6em;
-            }
+            margin-top: 50px;
+         
         }
     
 
@@ -177,8 +175,9 @@
 
         .director {
             display: block;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--main-color);
+            font-size: 18px;
 
             &.dr02 {
                 margin-top: 10px;
@@ -189,18 +188,17 @@
 
     &_img {
         position: relative;
-        width: 49%;
+        width: 45%;
         img {
             border-radius: 16px;
         }
     }
 
     &_content {
-        max-width: 464px;
-        width: calc(51% - 60px);
+        width: calc(55% - 60px);
 
         h4 {
-            line-height: 2;
+            line-height: 1.5;
             font-weight: 600;
             position: relative;
             z-index: 1;
@@ -217,12 +215,12 @@
                 top: -0.1375em;
                 left: -0.0375em;
                 line-height: 0.5;
-                font-size: 6em;
+                font-size: 4.5em;
                 color: var(--clr1);
                 z-index: -1;
                 letter-spacing: 0;
                 font-weight: 500;
-                font-family: var(--f-rounded);
+                font-family: var(--f-en);
                 opacity: .05;
             }
         }
@@ -232,8 +230,10 @@
 @media only screen and (max-width: 1280px) and (min-width: 769px) {
     .under {
         .interview_catch {
+            &::before{height: 355px;}
             p {
-                font-size: 28px;
+                font-size: 24px;
+                padding: 2.9em 3vw;
             }
         }
         &.page-short-interview,

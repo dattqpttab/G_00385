@@ -28,7 +28,8 @@
     font-size: 2.9vw;
   }
   .home_page .key .catch {
-    padding-bottom: 6vw;
+    padding-bottom: 6vmin;
+    width: 100%;
   }
   .home_page .key .s1 {
     background-image: url(../images/idx_mv01_sp.jpg);
@@ -49,13 +50,27 @@
   .home_page .key {
     font-size: 1.1vmin;
   }
+  .home_page .key h2 {
+    font-size: 5vmin;
+  }
+  .home_page .key p {
+    font-size: 3vmin;
+  }
 }
 @media only screen and (max-width: 480px) {
   .home_page .key h2 {
     font-size: 4.7vw;
   }
   .home_page .key p {
-    font-size: 4.3vw;
+    font-size: 4vw;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .home_page .key h2 {
+    font-size: 5.5vw;
+  }
+  .home_page .key h2 .br_375 {
+    display: block;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -66,7 +81,7 @@
 @media only screen and (max-width: 768px) {
   .home_page h3 {
     margin-bottom: 30px;
-    font-size: calc(var(--ttl_size) - 2px);
+    font-size: calc(var(--ttl_size) + 2px);
   }
 }
 @media only screen and (max-width: 768px) {
@@ -80,6 +95,9 @@
   .index01 .timetable table {
     font-size: 9px;
   }
+  .index01 h3 .en.big {
+    font-size: 2em;
+  }
   .index01 .label {
     font-size: 7px;
   }
@@ -88,6 +106,7 @@
   }
   .index01 .idx01_box_infor #calendar {
     height: 300px;
+    padding: 5px;
   }
   .index01 .idx01_box_infor .box_left,
   .index01 .idx01_box_infor .box_right {
@@ -128,6 +147,7 @@
   }
   .index07 {
     padding: 40px 20px;
+    background-image: url(../images/idx07_bg_sp.jpg);
   }
   .index07 .box {
     width: 100%;
@@ -136,6 +156,10 @@
     margin-right: auto;
     min-height: 400px;
     padding: 40px !important;
+    background-image: url(../images/idx07_box_bg01_sp.jpg);
+  }
+  .index07 .box:nth-child(2n) {
+    background-image: url(../images/idx07_box_bg02_sp.jpg);
   }
   .index07 .box .ttl {
     font-size: 20px;
@@ -169,12 +193,8 @@
   }
 }
 @media only screen and (max-width: 520px) {
-  .index01 .timetable {
-    overflow: auto;
-  }
   .index01 .timetable table {
-    font-size: 8px;
-    width: 550px;
+    font-size: 6px;
   }
   .index01 .tbl_note {
     display: block;
@@ -193,6 +213,13 @@
   }
   .index07 .box {
     padding: 40px 5vw !important;
+  }
+  .index01 .inner_big {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .index01 .idx01_box_infor .note {
+    margin-left: 5px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -235,7 +262,7 @@
   }
   .index03 .block_trouble_img {
     max-width: 320px;
-    width: 60%;
+    width: 85%;
     margin: 0 auto;
   }
   .index03 .listcheck li {
@@ -275,16 +302,10 @@
   .index04 .block_reason_item:nth-child(3)::after {
     background-color: #95bb58;
   }
-  .index04 .block_reason_item:nth-child(3) .block_reason_num::before {
-    background-color: #95bb58;
-  }
   .index04 .block_reason_item:nth-child(4)::before {
     background-color: #645844;
   }
   .index04 .block_reason_item:nth-child(4)::after {
-    background-color: #f8ae33;
-  }
-  .index04 .block_reason_item:nth-child(4) .block_reason_num::before {
     background-color: #f8ae33;
   }
   .index04 .block_reason_content {
@@ -319,10 +340,12 @@
   }
   .index05 .block_endoscopy .col_left {
     background-image: url(../images/idx05_bg01_sp.jpg);
+    background-position: top left;
     border-bottom: 1px solid #503320;
   }
   .index05 .block_endoscopy .col_right {
     background-image: url(../images/idx05_bg02_sp.jpg);
+    background-position: top right;
   }
   .index05 .block_endoscopy .item {
     padding: 15px 5px 21px;
@@ -332,6 +355,7 @@
   .index05 .block_endoscopy .title {
     font-size: 15px;
     letter-spacing: 0em;
+    margin-bottom: 5px;
   }
   .index05 .block_endoscopy_ttl h4 {
     font-size: 22px;
@@ -363,6 +387,20 @@
     font-size: 3vw;
     letter-spacing: 0.05em;
   }
+  @supports (-webkit-touch-callout: none) {
+    .index06 .TabContainer .TabPager {
+      /* Specific to iOS devices */
+      transform: translateY(0.1px);
+    }
+  }
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      .index06 .TabContainer .TabPager {
+        /* Safari */
+        transform: translateY(0.1px);
+      }
+    }
+  }
   .index06 .TabContainer .TabPager li {
     padding: 11px 10px 13px;
   }
@@ -371,6 +409,7 @@
   }
   .index06 .TabContainer .TabContent {
     border-radius: 15px;
+    position: relative;
   }
   .index06 .TabContainer .TabContent > ul > li {
     padding: 20px 15px 20px;
@@ -387,9 +426,15 @@
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 375px) {
   .index06 .TabContainer .TabPager li .tt {
     font-size: 16px;
+  }
+  .index05 .block_endoscopy .col_left {
+    background-position: left -60px top;
+  }
+  .index05 .block_endoscopy .col_right {
+    background-position: right -60px top;
   }
 }
 @media only screen and (max-width: 768px) {

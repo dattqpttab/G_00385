@@ -439,8 +439,24 @@ a {
     }
 }
 
+
 @media only screen and (min-width: 769px) {
     .sp_only {
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 450px) {
+    .sp_450 {
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 376px) {
+    .sp_375 {
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 321px) {
+    .sp_320 {
         display: none !important;
     }
 }
@@ -705,6 +721,7 @@ figure ,picture{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
                 min-height: 3.66667em;
                 padding: .5em 1.4em;
                 position: relative;
@@ -724,7 +741,7 @@ figure ,picture{
                 }
 
                 @include screen('min769') {
-                    &:hover {
+                    &:not([target*="_blank"]):hover {
 
                     background-color: var(--clr2);
 
@@ -732,6 +749,8 @@ figure ,picture{
                             transform: translateX(5px);
                         }
                     }
+
+                    
                 }
 
 
